@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Dancing+Script:wght@400..700&family=Playwrite+HU:wght@100..400&display=swap');
+
+:root {
+    --color1: #F8FAFC;
+    --color2: #D9EAFD;
+    --color3: #BCCCDC;
+    --color4: #9AA6B2;
+    --color5: #3e4348;
+
+}
+
+body {
+    background: var(--color4);
+    background-image:/* membuat pola grid */
+        linear-gradient(var(--color3) 1px, transparent 1px), /*garis mendatar */
+        linear-gradient(90deg, var(--color3) 1px, transparent 1px); /*garis tegak */
+    background-size: 40px 40px; /* besar kotaknyah */
+    min-height: 100vh; /* agar bagian atas ada space sehingga bisa ke tenggah */
+    margin: 0;
+    padding: 0;
+    display: flex; /* flexbox supaya bisa center */
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    background: var(--color3);
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    box-shadow: 0 4px var(--color2);
+    border-radius: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 20px;
+    position: relative; /* supaya add-menu bisa absolute di dalam */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: default;
+    color: var(--color5);
+}
+
+.add-btn {
+    font-size: 1.8rem;
+    background: var(--color1);
+    color: var(--color5);
+    border: none;
+    padding: 5px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-menu {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background: var(--color1);
+    color: var(--color5);
+    padding: 10px;
+    display: none; /* saat tanda + belum di tekan dia tidak akan terlihat tapi begitu ditekan akan ada */
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.add-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.add-menu.active {
+    display: flex;
+}
+
+.add-menu button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color3);
+    color: var(--color5);
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}

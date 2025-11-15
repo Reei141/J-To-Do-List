@@ -9,6 +9,10 @@
 
 body {
     background: var(--color4);
+    background-image:/* membuat pola grid */
+        linear-gradient(var(--color3) 1px, transparent 1px), /*garis mendatar */
+        linear-gradient(90deg, var(--color3) 1px, transparent 1px); /*garis tegak */
+    background-size: 40px 40px; /* besar kotaknyah */
     min-height: 100vh; /* agar bagian atas ada space sehingga bisa ke tenggah */
     margin: 0;
     padding: 0;
@@ -16,7 +20,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+ 
 
 header {
     margin-top: 20px;
@@ -27,6 +31,8 @@ header {
     font-size: 40px;
     font-weight: bold;
     text-shadow: 0 3px var(--color2);
+    cursor: default;
+    font-family: 'BBH Sans Hegarty', sans-serif;
 }
 
 .start-btn {
@@ -40,6 +46,7 @@ header {
     font-size: 18px;
     box-shadow: 0 4px var(--color2);
     cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .start-btn:hover {
@@ -59,10 +66,6 @@ header {
 .img-frame {
     display: flex;  /* supaya isinya selalu di tengah */
     justify-content: center;
-    align-items: center;
-    background: var(--color4);   /* warna frame */
-    padding: 15px;              /* ketebalan frame */
-    border-radius: 15px;         /* sudut tumpul */
     width: fit-content;         /* biar ukuran pas gambar */
     margin: 0 auto;             /* biar center di parent */
 }
