@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Hegarty&family=Dancing+Script:wght@400..700&family=Playwrite+HU:wght@100..400&display=swap');
+
+:root {
+    --color1: #F8FAFC;
+    --color2: #D9EAFD;
+    --color3: #BCCCDC;
+    --color4: #9AA6B2;
+}
+
+body {
+    background: var(--color4);
+    min-height: 100vh; /* agar bagian atas ada space sehingga bisa ke tenggah */
+    margin: 0;
+    padding: 0;
+    display: flex; /* flexbox supaya bisa center */
+    justify-content: center;
+    align-items: center;
+}
+
+
+header {
+    margin-top: 20px;
+}
+
+.title {
+    color: var(--color4);
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 0 3px var(--color2);
+}
+
+.start-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 12px;
+    background: var(--color1);
+    color: var(--color4);
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px var(--color2);
+    cursor: pointer;
+}
+
+.start-btn:hover {
+    transform: translateY(-3px);
+}
+
+.wrapper {
+    background: var(--color3);
+    width: 90%;
+    max-width: 450px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 6px var(--color2);
+    text-align: center;
+}
+
+.img-frame {
+    display: flex;  /* supaya isinya selalu di tengah */
+    justify-content: center;
+    align-items: center;
+    background: var(--color4);   /* warna frame */
+    padding: 15px;              /* ketebalan frame */
+    border-radius: 15px;         /* sudut tumpul */
+    width: fit-content;         /* biar ukuran pas gambar */
+    margin: 0 auto;             /* biar center di parent */
+}
+
+.img-frame img {
+    width: 70%;
+    border-radius: 10px;
+    display: block;
+}
