@@ -45,6 +45,7 @@ header {
     font-weight: bold;
     cursor: default;
     color: var(--color5);
+    font-family: 'BBH Sans Hegarty', sans-serif;
 }
 
 .add-btn {
@@ -85,8 +86,76 @@ header {
     padding: 8px 12px;
     border: none;
     border-radius: 8px;
-    background: var(--color3);
+    background: var(--color2);
     color: var(--color5);
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
+    box-shadow: 0 4px var(--color3);
+}
+
+.add-menu button:hover {
+    background: var(--color3);
+    transform: scale(1.15);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header{
+    background-color: var(--color1);
+    border-radius: 15px;
+    bottom: 10px;
+}
+
+main{
+    top: 10px;
+    background-color: var(--color1);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.task-section{
+    background-color: var(--color2);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px var(--color3);
+}
+
+.pop {
+    display: none; /* awalnya tidak terlihat */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4); /* gelap transparan */
+    justify-content: center; /* center secara horizontal */
+    align-items: center; /* center secara vertical */
+    z-index: 9999; /* di atas elemen lain */
+}
+
+.pop.active {
+    display: flex;
+}
+
+.pop-content {
+    background: var(--color2);
+    width: 300px;  
+    height: 200px;          /* ukuran kotak */
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wrapper.inactive {
+    filter: blur(5px);
+    opacity: 0.4;
+    pointer-events: none; /* tidak bisa diklik */
+    transform: scale(0.98);
+    transition: 0.3s;
 }

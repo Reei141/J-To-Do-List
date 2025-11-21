@@ -8,19 +8,50 @@
     <title>J To-Do| Main Page</title>
 </head>
 <body>
-    <div class="wrapper">
-    <header>
-        <h2 class="logo">J To-Do</h2>
-        <button class="add-btn">+</button>
-        <div class="add-menu">
-            <button class="add-daily">Daily</button>
-            <button class="add-monthly">Monthly</button>
-            <button class="add-on-date">On-Date</button>
-        </div>
-    </header>
+    <!-- ini jadi sebuah konten pop-up yg digunakan untuk menambah task baru 
+    selalu berada di paling atas dari elemen lain di halaman -->
+        <div class="pop"> 
+            <div class="pop-content">
+                <h3>Add Task</h3>
+                <input type="text" class="task-input">
+                <button class="save-btn">Save</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>    
 
-    <main>
-    </main>
+    <div class="wrapper">
+        <header>
+            <h2 class="logo">J To-Do</h2>
+            <button class="add-btn">+</button>
+            <div class="add-menu">
+                <button class="add-daily">Daily</button>
+                <button class="add-monthly">Monthly</button>
+                <button class="add-on-date">On-Date</button>
+            </div>
+        </header>
+
+        <main>
+            <section class="task-section">
+                <h3 class="section-title">Daily Tasks</h3>
+                <div class="task-container daily-tasks">
+                    <!-- Daily tasks will be appended here -->
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h3 class="section-title">Monthly Tasks</h3>
+                <div class="task-container monthly-tasks">
+                    <!-- Monthly tasks will be appended here -->
+                </div>
+            </section>
+
+            <section class="task-section">
+                <h3 class="section-title">On-Date Tasks</h3>
+                <div class="task-container on-date-tasks">
+                    <!-- On-Date tasks will be appended here -->
+                </div>
+            </section>
+        </main>
     </div>
 </body>
 </html>
